@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul {
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            position: relative;
+            /* 真 3 d */
+            transform-style: preserve-3d;
+            transition: all 20s;
+
+            /* 只是用于辅助布局的, 布局完成可以拿掉 */
+            /*perspective: 1000px;*/
+        }
+
+        ul:hover {
+            transform: rotateX(720deg) rotateY(720deg) rotateZ(720deg);
+        }
+
+        li {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 1s;
+        }
+
+        /* 前面 */
+        li:nth-child(1) {
+            /*background-color: pink;*/
+            transform: translateZ(100px);
+        }
+        /* 上面 */
+        li:nth-child(2) {
+            /*background-color: green;*/
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        /* 后面 */
+        li:nth-child(3) {
+            /*background-color: orange;*/
+            transform: rotateX(180deg) translateZ(100px);
+        }
+        /* 下面 */
+        li:nth-child(4) {
+            /*background-color: brown;*/
+            transform: rotateX(270deg) translateZ(100px);
+        }
+        /* 左面 */
+        li:nth-child(5) {
+            /*background-color: lime;*/
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        /* 右面 */
+        li:nth-child(6) {
+            /*background-color: blue;*/
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+
+
+        /* 炸开的效果 */
+        ul:hover li:nth-child(1) {
+            transform: translateZ(200px);
+        }
+        ul:hover li:nth-child(2) {
+            transform: rotateX(90deg) translateZ(200px);
+        }
+        ul:hover li:nth-child(3) {
+            transform: rotateX(180deg) translateZ(200px);
+        }
+        ul:hover li:nth-child(4) {
+            transform: rotateX(270deg) translateZ(200px);
+        }
+        ul:hover li:nth-child(5) {
+            transform: rotateY(-90deg) translateZ(200px);
+        }
+        ul:hover li:nth-child(6) {
+            transform: rotateY(90deg) translateZ(200px);
+        }
+
+    </style>
+</head>
+<body>
+
+<ul>
+    <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587885444127&di=fa6e4bb071782d345919889c6f81794f&imgtype=0&src=http%3A%2F%2Fimg.jk51.com%2Fimg_jk51%2F343852088.jpeg" alt="" width="200px" height="200px"></li>
+    <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587885494572&di=256dcd56962561c9b3e83b0e23bba49c&imgtype=0&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F7aec54e736d12f2ec27d99f44ac2d5628535682d.jpg" alt="" width="200px" height="200px"></li>
+    <li><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3364744800,2221298844&fm=26&gp=0.jpg" alt="" width="200px" height="200px"></li>
+    <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587885552117&di=2b5e1f5f30f475d0683daf0164bce30e&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201507%2F17%2F20150717152935_ch3MG.jpeg" alt="" width="200px" height="200px"></li>
+    <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587885592084&di=e83cffef0631b12a14a836164af3af52&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201511%2F26%2F20151126154744_mRVA8.jpeg" alt="" width="200px" height="200px"></li>
+    <li><img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=685021564,3576709481&fm=26&gp=0.jpg" alt="" width="200px" height="200px"></li>
+</ul>
